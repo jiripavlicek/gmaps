@@ -32,7 +32,11 @@ class Gmaps{
             'corePath' => $corePath,
             'chunksPath' => $corePath.'elements/chunks/',
         ),$properties);
-
+        
+        if (!$this->config['scrollwheel']) {
+            $this->config['scrollwheel'] = 'true';
+        }
+        
         if ($this->modx->getOption('debug',$this->config,0)) {
             error_reporting(E_ALL & ~E_NOTICE); ini_set('display_errors',true);
             $this->modx->setLogTarget('HTML');
@@ -619,7 +623,8 @@ function initialize(){
     var optionsMap = {
         zoom: ' . $this->config['zoom'] . ',
         center: centerMap,
-        mapTypeId: google.maps.MapTypeId.' . $this->config['mapType'] . '
+	scrollwheel: ' . $this->config['scrollwheel'] . ',
+	mapTypeId: google.maps.MapTypeId.' . $this->config['mapType'] . '
     }
     var map = new google.maps.Map(document.getElementById("'. $this->config['mapId'] .'"), optionsMap);
     setMarkers(map);';

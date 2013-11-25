@@ -1,14 +1,11 @@
---------------------
-Snippets: Gmaps
---------------------
-Author: Coroico <coroico@wangba.fr>
+gmaps
+=====
 
-Display a Google Map with markers and graphical layers - API Google Maps V3.
+Original Gmaps MODX component by Coroico
 
-Documentation : core/components/gmaps/docs
-Demo web site : www.revo.wangba.fr
+----------------------------------------------------------------
 
-2013-11-25 Jiri Pavlicek https://github.com/jiripavlicek/gmaps
+Modified on 2013-11-25 by Jiri Pavlicek.
 
 Added optional snippet parameter "scrollwheel" for disable mouse scroll wheel by scrollwheel Google maps parameter.
 
