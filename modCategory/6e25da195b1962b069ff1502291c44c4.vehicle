@@ -1,0 +1,85 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      '36abe4598f856d21c3555d56cb6aa55e' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":1,"name":"beachflag","description":"Marker for Gmaps","editor_type":0,"category":0,"cache_type":0,"snippet":"\\"beachflag.png\\" , 20 , 32 , 0 , 0 , 0 , 32   : \\"beachflag_shadow.png\\" , 37 , 32 , 0 , 0 , 0 , 32  :  1 ,  1 ,  1,  20,  18 ,  20 ,  18  ,  1","locked":0,"properties":""}',
+        'guid' => '021424eae2abda5daeb3ee1010be4e21',
+        'native_key' => 1,
+        'signature' => 'c757d7cd3cb26e350b7af0261a374c27',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '5524f28de74429dfac1534ce8e922dc4' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"name":"Gmaps","description":"Gmaps snippet for Gmaps.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\r\\n * Gmaps\\r\\n *\\r\\n * Display a Google Map and adds some markers - API Google Maps V3\\r\\n *\\r\\n *\\r\\n * @category    Third Party Component\\r\\n * @version     1.0.2\\r\\n * @license     http:\\/\\/www.gnu.org\\/copyleft\\/gpl.html GNU Public License (GPL)\\r\\n *\\r\\n * @author      Coroico - www.revo.wangba.fr\\r\\n * @date        03\\/12\\/2011\\r\\n *\\r\\n * -----------------------------------------------------------------------------\\r\\n *\\/\\r\\n\\r\\nrequire_once $modx->getOption(\'gmaps.core_path\',null,$modx->getOption(\'core_path\').\'components\\/gmaps\\/\').\'model\\/gmaps\\/gmaps.class.php\';\\r\\n\\r\\n$gm  = str_replace(\' \', \'\', $modx->getOption(\'mapId\',$scriptProperties,\'Gmaps\'));\\r\\n\\r\\n$$gm = new Gmaps($modx,$scriptProperties);\\r\\nif (!($$gm instanceof Gmaps)) {\\r\\n    $this->modx->log(modX::LOG_LEVEL_ERROR,\'[Gmaps] Gmaps class not found.\');\\r\\n    return false;\\r\\n}\\r\\n\\r\\n$output = $$gm->output();\\r\\n\\r\\nreturn $output;","locked":0,"properties":"a:20:{s:5:\\"mapId\\";a:6:{s:4:\\"name\\";s:5:\\"mapId\\";s:4:\\"desc\\";s:22:\\"gmaps.gmaps_mapId_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:5:\\"Gmaps\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:10:\\"apiVersion\\";a:6:{s:4:\\"name\\";s:10:\\"apiVersion\\";s:4:\\"desc\\";s:27:\\"gmaps.gmaps_apiVersion_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:8:\\"language\\";a:6:{s:4:\\"name\\";s:8:\\"language\\";s:4:\\"desc\\";s:25:\\"gmaps.gmaps_language_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:2:\\"en\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:9:\\"mapLatLng\\";a:6:{s:4:\\"name\\";s:9:\\"mapLatLng\\";s:4:\\"desc\\";s:26:\\"gmaps.gmaps_mapLatLng_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:19:\\"46.538362, 2.427753\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:4:\\"zoom\\";a:6:{s:4:\\"name\\";s:4:\\"zoom\\";s:4:\\"desc\\";s:21:\\"gmaps.gmaps_zoom_desc\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";i:5;s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:7:\\"mapType\\";a:6:{s:4:\\"name\\";s:7:\\"mapType\\";s:4:\\"desc\\";s:24:\\"gmaps.gmaps_mapType_desc\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:4:{i:0;a:2:{s:4:\\"text\\";s:9:\\"SATELLITE\\";s:5:\\"value\\";s:9:\\"SATELLITE\\";}i:1;a:2:{s:4:\\"text\\";s:6:\\"HYBRID\\";s:5:\\"value\\";s:6:\\"HYBRID\\";}i:2;a:2:{s:4:\\"text\\";s:7:\\"TERRAIN\\";s:5:\\"value\\";s:7:\\"TERRAIN\\";}i:3;a:2:{s:4:\\"text\\";s:7:\\"ROADMAP\\";s:5:\\"value\\";s:7:\\"ROADMAP\\";}}s:5:\\"value\\";s:7:\\"ROADMAP\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:8:\\"mapWidth\\";a:6:{s:4:\\"name\\";s:8:\\"mapWidth\\";s:4:\\"desc\\";s:25:\\"gmaps.gmaps_mapWidth_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:4:\\"100%\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:9:\\"mapHeight\\";a:6:{s:4:\\"name\\";s:9:\\"mapHeight\\";s:4:\\"desc\\";s:26:\\"gmaps.gmaps_mapHeight_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:5:\\"500px\\";s:7:\\"lexicon\\";s:17:\\"gmaps:properties_\\";}s:8:\\"scalable\\";a:6:{s:4:\\"name\\";s:8:\\"scalable\\";s:4:\\"desc\\";s:25:\\"gmaps.gmaps_scalable_desc\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:2:{i:0;a:2:{s:4:\\"text\\";s:3:\\"Yes\\";s:5:\\"value\\";s:3:\\"yes\\";}i:1;a:2:{s:4:\\"text\\";s:2:\\"No\\";s:5:\\"value\\";s:2:\\"no\\";}}s:5:\\"value\\";s:2:\\"no\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:7:\\"markers\\";a:6:{s:4:\\"name\\";s:7:\\"markers\\";s:4:\\"desc\\";s:24:\\"gmaps.gmaps_markers_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:3:\\"kml\\";a:6:{s:4:\\"name\\";s:3:\\"kml\\";s:4:\\"desc\\";s:20:\\"gmaps.gmaps_kml_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:11:\\"mkrLatLngTv\\";a:6:{s:4:\\"name\\";s:11:\\"mkrLatLngTv\\";s:4:\\"desc\\";s:28:\\"gmaps.gmaps_mkrLatLngTv_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:9:\\"mkrLatLng\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:8:\\"mkrClick\\";a:6:{s:4:\\"name\\";s:8:\\"mkrClick\\";s:4:\\"desc\\";s:25:\\"gmaps.gmaps_mkrClick_desc\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:3:{i:0;a:2:{s:4:\\"text\\";s:4:\\"info\\";s:5:\\"value\\";s:4:\\"info\\";}i:1;a:2:{s:4:\\"text\\";s:4:\\"link\\";s:5:\\"value\\";s:4:\\"link\\";}i:2;a:2:{s:4:\\"text\\";s:4:\\"none\\";s:5:\\"value\\";s:4:\\"none\\";}}s:5:\\"value\\";s:4:\\"link\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:7:\\"mkrOver\\";a:6:{s:4:\\"name\\";s:7:\\"mkrOver\\";s:4:\\"desc\\";s:24:\\"gmaps.gmaps_mkrOver_desc\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:3:{i:0;a:2:{s:4:\\"text\\";s:4:\\"info\\";s:5:\\"value\\";s:4:\\"info\\";}i:1;a:2:{s:4:\\"text\\";s:4:\\"link\\";s:5:\\"value\\";s:4:\\"link\\";}i:2;a:2:{s:4:\\"text\\";s:4:\\"none\\";s:5:\\"value\\";s:4:\\"none\\";}}s:5:\\"value\\";s:4:\\"none\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:9:\\"mkrIconTv\\";a:6:{s:4:\\"name\\";s:9:\\"mkrIconTv\\";s:4:\\"desc\\";s:26:\\"gmaps.gmaps_mkrIconTv_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:9:\\"mkrLinkTv\\";a:6:{s:4:\\"name\\";s:9:\\"mkrLinkTv\\";s:4:\\"desc\\";s:26:\\"gmaps.gmaps_mkrLinkTv_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:7:\\"iconDir\\";a:6:{s:4:\\"name\\";s:7:\\"iconDir\\";s:4:\\"desc\\";s:24:\\"gmaps.gmaps_iconDir_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:20:\\"assets\\/images\\/gmaps\\/\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:6:\\"method\\";a:6:{s:4:\\"name\\";s:6:\\"method\\";s:4:\\"desc\\";s:23:\\"gmaps.gmaps_method_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:4:\\"POST\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:13:\\"infoboxAjaxId\\";a:6:{s:4:\\"name\\";s:13:\\"infoboxAjaxId\\";s:4:\\"desc\\";s:30:\\"gmaps.gmaps_infoboxAjaxId_desc\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";i:0;s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}s:9:\\"urlScheme\\";a:6:{s:4:\\"name\\";s:9:\\"urlScheme\\";s:4:\\"desc\\";s:26:\\"gmaps.gmaps_urlScheme_desc\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:5:{i:0;a:2:{s:4:\\"text\\";s:20:\\"relative to site_url\\";s:5:\\"value\\";i:-1;}i:1;a:2:{s:4:\\"text\\";s:35:\\"prepended with site_url from config\\";s:5:\\"value\\";s:4:\\"full\\";}i:2;a:2:{s:4:\\"text\\";s:35:\\"prepended with base_url from config\\";s:5:\\"value\\";s:3:\\"abs\\";}i:3;a:2:{s:4:\\"text\\";s:35:\\"absolute url, forced to http scheme\\";s:5:\\"value\\";s:4:\\"http\\";}i:4;a:2:{s:4:\\"text\\";s:36:\\"absolute url, forced to https scheme\\";s:5:\\"value\\";s:5:\\"https\\";}}s:5:\\"value\\";i:-1;s:7:\\"lexicon\\";s:20:\\"advsearch:properties\\";}}","moduleguid":""}',
+        'guid' => '80103f30aa419b45e4cfc769083780ff',
+        'native_key' => 1,
+        'signature' => '8f80f94d8c5bca28d1310b62cb764013',
+      ),
+      'e674f0529250c5d7fee887dbacd80f1c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":2,"name":"GmapsInfobox","description":"GmapsInfobox snippet for Gmaps.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\r\\n * GmapsInfobox\\r\\n *\\r\\n * Returns the info window content requested by Gmaps thru an ajax request\\r\\n *\\r\\n * @category    Third Party Component\\r\\n * @version     1.0.2\\r\\n * @license     http:\\/\\/www.gnu.org\\/copyleft\\/gpl.html GNU Public License (GPL)\\r\\n *\\r\\n * @author      Coroico - www.revo.wangba.fr\\r\\n * @date        03\\/12\\/2011\\r\\n *\\r\\n * -----------------------------------------------------------------------------\\r\\n *\\/\\r\\n\\r\\nglobal $modx;\\r\\n\\r\\nif (isset($_REQUEST[\'mkrid\'])) {\\r\\n    $mkrid = intval(strip_tags($modx->sanitizeString($_REQUEST[\'mkrid\'])));\\r\\n\\r\\n    \\/\\/ mkrTextTv : [ tv name | \'mkrText\']\\r\\n    \\/\\/ name of tv where is stored the text value of the marker. Tv output should be as text: Text of the marker\\r\\n    \\/\\/ By default : \'mkrText\'\\r\\n    $mkrTextTv = trim($modx->getOption(\'mkrTextTv\',$scriptProperties,\'mkrText\'));\\r\\n\\r\\n    $debug = $modx->getOption(\'debug\',$scriptProperties,false);\\r\\n\\r\\n    if ($mkrid && $mkrTextTv) {\\r\\n\\r\\n    \\t$c = $modx->newQuery(\'modTemplateVar\');\\r\\n        $c->select(\'modTemplateVar.id AS id, value\');\\r\\n        $c->query[\'distinct\'] = \'DISTINCT\';\\r\\n        $c->innerJoin(\'modTemplateVarTemplate\',\'tvtpl\', array(\\"modTemplateVar.id = tvtpl.tmplvarid\\"));\\r\\n        $cond = \\"tvc.tmplvarid = modTemplateVar.id AND tvc.contentid = \'\\" . $mkrid . \\"\'\\";\\r\\n        $c->leftJoin(\'modTemplateVarResource\',\'tvc\', array($cond));\\r\\n        $c->where(array(\'tvc.contentid\' => $mkrid, \'modTemplateVar.name\' => $mkrTextTv ));\\r\\n\\r\\n        if ($debug) {\\r\\n            $modx->setLogTarget(\'HTML\');\\r\\n            $modx->setLogLevel(modX::LOG_LEVEL_DEBUG);\\r\\n            $c->prepare();\\r\\n            $modx->log(modX::LOG_LEVEL_INFO, $c->toSQL());\\r\\n        }\\r\\n        $collection = $modx->getCollection(\'modTemplateVar\', $c);\\r\\n\\r\\n        if (count($collection)) {\\r\\n            $tvValue = $collection[0]->get(\\"value\\");\\r\\n            $tvValue = preg_replace(\'#\\\\[\\\\~\\\\[\\\\[\\\\*(.*?)\\\\]\\\\]\\\\~\\\\]#\', $modx->makeUrl($mkrid), $tvValue); \\/\\/replace [~[[*id]]~] by index.php?id=id\\r\\n            $chunk = $modx->newObject(\'modChunk\');\\r\\n            $chunk->setContent($tvValue);\\r\\n            $chunk->setCacheable(false);\\r\\n            $tvParsed = $chunk->process();\\r\\n            return $tvParsed;\\r\\n        }\\r\\n        else return \\"ERROR: infowindow text not found\\";\\r\\n    }\\r\\n    else {\\r\\n        return \\"ERROR: infowindow rejected\\";\\r\\n    }\\r\\n}","locked":0,"properties":"a:1:{s:9:\\"mkrTextTv\\";a:6:{s:4:\\"name\\";s:9:\\"mkrTextTv\\";s:4:\\"desc\\";s:33:\\"gmaps.gmapsInfobox_mkrTextTv_desc\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";s:0:\\"\\";s:5:\\"value\\";s:7:\\"mkrText\\";s:7:\\"lexicon\\";s:16:\\"gmaps:properties\\";}}","moduleguid":""}',
+        'guid' => '499f1092a28af1a12f6b19ae08d428bf',
+        'native_key' => 2,
+        'signature' => '7bb9cc0f866bb68a2612f40c635fbb34',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'gmaps',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"gmaps-1.0.3-pl\\/modCategory\\/6e25da195b1962b069ff1502291c44c4\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"gmaps"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"gmaps-1.0.3-pl\\/modCategory\\/6e25da195b1962b069ff1502291c44c4\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"gmaps"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cbbde6e08b52e1c408eddf721b5f2680',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '6e25da195b1962b069ff1502291c44c4',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"Gmaps"}',
+);

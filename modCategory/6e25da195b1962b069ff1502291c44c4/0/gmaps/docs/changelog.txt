@@ -1,0 +1,36 @@
+Changelog for Gmaps
+
+Gmaps 1.0.3
+========================================================================
+Corrected issues;
+- [#06] Infobox content not displayed when FURL are activated (for Revo Release > 2.0.8)
+
+Parameter urlScheme added. (See documentation)
+
+
+Gmaps 1.0.2
+========================================================================
+New features:
+- apiVersion parameter added
+- method parameter (GET / POST) added
+- mkrLatLngTv parameter improved. You could now use 2 Tvs for latitude & longitude
+- mkrLinkTV parameter added. To specify a redirection page for the 'link' mode
+
+Corrected issues;
+- [#04] can't change the mapType parameter
+- [#05] Wrong default iconDir directory.
+
+WARNING: Now the default marker images directory is /assets/images/gmaps/
+         Move your previous marker images into this directory first 
+         or use the iconDir parameter to specify an another directory.
+         
+Gmaps 1.0.1
+========================================================================
+- [#01] Use of an image name instead of chunk name
+- [#02] Compliance with Revo 2.1
+- [#03] Not possible to change mkrLatLngTv
+
+
+Gmaps 1.0.0
+========================================================================
+Initial Version
